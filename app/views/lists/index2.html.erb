@@ -1,0 +1,66 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><%= link_to 'View list', lists_path %></li>
+  <li><%= link_to 'New list', new_list_path %></li>
+</ul>
+
+<h1>Listing lists</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr>
+        <td>
+          <span class="has-tooltip" data-toggle="tooltip" name="<%= "Created on #{list.created_at.strftime("%m/%e/%Y at %w:%M %p")}, Last modified on #{list.updated_at.strftime("%m/%e/%Y at %w:%M %p")}" %>">
+            <%= list.name %>
+          </span>
+        </td>
+        <td>
+          <% if list.type? %>
+            <!-- Button trigger modal -->
+            <button class="btn btn-link" data-toggle="modal" data-target="#list-<%= list.id %>-type">
+              View type
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="list-<%= list.id %>-type" tabindex="-1" role="dialog" aria-labelledby="list-<%= list.id %>-label" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-name" id="list-<%= list.id %>-label">Notes</h4>
+                  </div>
+                  <div class="modal-body">
+                    <%= list.type %>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+
+          <% if list.type? %>
+            <button type="button" class="btn btn-link has-popover" data-toggle="popover" name="Notes" data-content="<%= list.type %>">View type (popover)</button>
+          <% end %>
+        </td>
+        <td><%= link_to 'Show', list, class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_list_path(list), class: 'btn btn-info btn-xs' %></td>
+        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_list_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> New List
+<% end %>

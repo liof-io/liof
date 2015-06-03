@@ -1,0 +1,9 @@
+ul.nav.nav-tabs[role="tablist"]
+  li
+    = link_to 'View list', lists_path
+  li.active
+    = link_to 'New list', new_list_path
+h1
+  | New list
+= render 'form'
+= link_to 'Back', lists_path

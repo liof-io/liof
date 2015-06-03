@@ -1,0 +1,39 @@
+syntax: glob
+
+# Ignore database
+db/*.sqlite3
+db/*.sqlite3-journal
+db/schema.rb
+
+# Ignore solr
+solr/development/data
+solr/*/data/index
+solr/pids
+log/sunspot-solr-development.log.lck
+
+# Ignore public files
+public/assets
+public/photo
+public/files
+
+# Ignore logfiles and tempfiles
+log/*.log
+tmp
+rails_best_practices_output.html
+*~
+*.orig
+*.rej
+
+# Ignore docfiles
+doc/api
+doc/app
+
+# Ignore spec
+coverage
+
+# Ignore code editor
+*.sublime-*
+.idea
+
+# Ignore translations js
+public/javascripts/translations.js

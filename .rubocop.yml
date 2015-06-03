@@ -1,0 +1,9 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  RunRailsCops: true
+Style/IfUnlessModifier:
+  MaxLineLength: 120
+Rails/HasAndBelongsToMany:
+  Exclude:
+    - app/models/**/*.rb

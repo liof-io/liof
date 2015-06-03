@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title
+      | liof.io
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true, defer: true
+    = csrf_meta_tags
+  body
+    = render 'layouts/navigation'
+    #main-container.container
+      .row
+        .col-xs-12
+          - flash.each do |name, msg|
+            = content_tag :div, msg, class: "alert alert-dismissible alert-#{name}"
+          / = render 'layouts/searches'
+          = yield

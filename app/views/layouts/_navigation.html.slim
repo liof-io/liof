@@ -1,0 +1,19 @@
+nav.navbar[role="navigation"]
+  .container
+    .navbar-header
+      a.navbar-brand[href="#{root_url}"]
+        .logo liof
+        .io io
+
+    ul.nav.navbar-nav.navbar-right
+      li.dropdown
+        a.dropdown-toggle[href="#" data-toggle="dropdown"]
+          | Menu
+          span.caret
+        ul.dropdown-menu[role="menu"]
+          li
+            a[href="#"]
+              | Login
+          li.divider
+          li
+            = link_to 'Create a list', new_list_path
