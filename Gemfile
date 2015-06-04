@@ -30,6 +30,7 @@ gem 'simple_form'                   # построение форм
 
 
 group :development do
+  gem 'pry'                         # An IRB alternative and runtime developer console
   gem 'rubocop', require: false     # Ruby static code analyzer, based on the community Ruby style guide
   gem 'capistrano-rails'            # Use Capistrano for deployment
   gem 'thin'                        # Fast & simple Ruby web server
