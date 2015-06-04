@@ -4,6 +4,7 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require bootstrap-sprockets
+#= require typeahead
 #= require react
 #= require react_ujs
 #= require react-tagsinput
