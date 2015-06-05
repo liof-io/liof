@@ -14,6 +14,7 @@ gem 'bcrypt', '~> 3.1.7'              # Use ActiveModel has_secure_password
 gem 'unicorn'                         # Use Unicorn as the app server
 gem 'mongoid'                         # ODM framework for MongoDB in Ruby
 gem 'mongoid-slug'                    # Mongoid Slug generates a URL slug or permalink
+gem 'chewy'
 gem 'cancan'                          # Authorization library
 gem 'devise'                          # Authentication
 gem 'kaminari'                        # Paginator
