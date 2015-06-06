@@ -3,11 +3,12 @@
 #= require jquery
 #= require jquery_ujs
 #= require turbolinks
+#= require js-routes
 #= require bootstrap-sprockets
-#= require typeahead
 #= require react
 #= require react_ujs
 #= require react-tagsinput
-#= require js-routes
+#= require typeahead
+#= require typeahead-init
 #= require components
 #= require global
