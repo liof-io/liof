@@ -1,12 +1,13 @@
 .tt-menu {
-  min-width: 120px;
+  min-width: 150px;
   margin-top: -5px;
   padding: 0;
   background-color: #ffffff;
-  border: 1px solid #5bc0de;
+  border: 1px solid #d3d3d3;
 }
 
 .tt-suggestion {
+  font-size: 15px;
   height: 2.6rem;
   line-height: 2.6rem;
   margin: 0;
