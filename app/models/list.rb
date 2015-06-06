@@ -10,6 +10,6 @@ class List
   private
 
   def self.search(query, options={})
-    List.where(name: query)
+    List.any_of(name: /.*#{query}.*/)
   end
 end

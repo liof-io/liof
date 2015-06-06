@@ -14,6 +14,10 @@ class ListsController < ApplicationController
     end
   end
 
+  def autocomplete
+    render json: List.search(params[:q]).only(:name)
+  end
+
   def show
   end
 
