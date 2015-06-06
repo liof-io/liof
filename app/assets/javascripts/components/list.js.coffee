@@ -1,7 +1,4 @@
-# @cjsx React.DOM
-
-@TaskList = React.createClass
-  displayName: 'TaskList'
+@List = React.createClass
 
   render: ->
     <div className='col-xs-6'>
@@ -12,11 +9,13 @@
         </div>
         <ul className='list-group'>
           <a href='#' className='list-group-item'>
-            Самая первая задачка
+            First task
             <span className='badge'>23</span>
+          </a>
+          <a href='#' className='list-group-item'>
+            Second task
+            <span className='badge'>11</span>
           </a>
         </ul>
       </div>
     </div>
-
-

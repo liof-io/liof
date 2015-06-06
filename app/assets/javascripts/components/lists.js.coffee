@@ -1,7 +1,4 @@
-# @cjsx React.DOM
-
-@TaskLists = React.createClass
-  displayName: 'TaskLists'
+@Lists = React.createClass
 
   getInitialState: ->
     didFetchData: false
@@ -33,15 +30,15 @@
 
   render: ->
     listsNode = @state.lists.map (list) ->
-      <TaskList key={list.id} data={list}/>
+      <List key={list.id} data={list}/>
 
     noDataNode =
-      <div className='warning'>
+      <div className='col-xs-12'>
         <h4>No list found...</h4>
       </div>
 
     <div>
-      <TaskSearch onFormSubmit={@_handleOnSearchSubmit}/>
+      <SearchInput onFormSubmit={@_handleOnSearchSubmit}/>
       <br />
       <br />
       <div className='row'>
@@ -53,6 +50,3 @@
         }
       </div>
     </div>
-
-
-

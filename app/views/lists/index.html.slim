@@ -1,27 +1,5 @@
-= react_component 'TaskLists', {}, { prerender: true }
-.row
-  - @lists.each do |list|
-    .col-xs-6
-      .panel.panel-default
-        / .panel-heading
-          / h3.panel-title
-          /   = list.name
-
-        .panel-body
-          h3.panel-title
-            = list.name
-          = list.type
-
-
-        ul.list-group
-          = link_to '#', class: 'list-group-item' do
-            | Самая первая задачка
-            span.badge
-              | 23
-          = link_to '#', class: 'list-group-item' do
-            | Вторая не такая важная задачка
-          = link_to '#', class: 'list-group-item' do
-            | Третья задачка
+= react_component 'Lists'
+/ , {lists: @lists}, { prerender: true }
 
 br
 = link_to new_list_path, class: 'btn btn-success' do
