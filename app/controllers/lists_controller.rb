@@ -6,7 +6,7 @@ class ListsController < ApplicationController
       List.search(params[:q])
     else
       List.all
-    end.sorted
+    end
 
     respond_to do |format|
         format.html { render :index }
