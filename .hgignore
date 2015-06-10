@@ -1,16 +1,5 @@
 syntax: glob
 
-# Ignore database
-db/*.sqlite3
-db/*.sqlite3-journal
-db/schema.rb
-
-# Ignore solr
-solr/development/data
-solr/*/data/index
-solr/pids
-log/sunspot-solr-development.log.lck
-
 # Ignore public files
 public/assets
 public/photo
