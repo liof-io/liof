@@ -16,7 +16,12 @@
   float: left;
 }
 
-.addinput {
+.newitem-form {
+  position: absolute;
+  display: inline;
+}
+
+.newitem-input {
   outline: none;
   width: 400px;
   border: 1px solid white;

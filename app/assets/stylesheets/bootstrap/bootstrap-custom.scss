@@ -2,9 +2,17 @@
 //   font-family: 'Open Sans', arial, 'helvetica cy';
 // }
 body {
-   background: #f7f7f7 !important;
+   background: #EDEDED !important;
 }
 
 * {
   border-radius: 3px !important;
+}
+
+.panel {
+  border: 0;
+}
+
+.list-group-item {
+  border: 1px solid #F7F7F7;
 }
