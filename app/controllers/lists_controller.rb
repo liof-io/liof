@@ -8,10 +8,7 @@ class ListsController < ApplicationController
       List.all
     end
 
-    respond_to do |format|
-        format.html { render :index }
-        format.json { render json: @lists }
-    end
+    render json: @lists
   end
 
   def autocomplete

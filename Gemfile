@@ -11,10 +11,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc   # bundle exec rake doc:rails generates the
 gem 'bcrypt', '~> 3.1.7'              # Use ActiveModel has_secure_password
 
 # custom gems
+gem 'therubyracer', platforms: :ruby  # Embed the V8 Javascript Interpreter into Ruby
 gem 'unicorn'                         # Use Unicorn as the app server
 gem 'mongoid'                         # ODM framework for MongoDB in Ruby
 gem 'mongoid-slug'                    # Mongoid Slug generates a URL slug or permalink
-gem 'chewy'
+gem 'chewy'                           # ODM and wrapper for the official Elasticsearch client
 gem 'cancan'                          # Authorization library
 gem 'devise'                          # Authentication
 gem 'kaminari'                        # Paginator
@@ -23,10 +24,10 @@ gem 'compass-rails'                   # Compass rails integration
 gem 'bootstrap-sass'                  # Sass-powered version of Bootstrap
 gem 'autoprefixer-rails'              # Add browser vendor prefixes automatically
 gem 'react-rails'                     # Makes it easier to use React and JSX in your Ruby on Rails application
-gem 'therubyracer', platforms: :ruby  # Embed the V8 Javascript Interpreter into Ruby
 gem 'sprockets-coffee-react'          # Sprockets preprocessor for CJSX (Coffeescript with React JSX markup)
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'js-routes'                       # Brings Rails named routes to javascript
-gem 'simple_form'                     # построение форм
+gem 'simple_form'                     # Forms made easy
 # gem "i18n-js", ">= 3.0.0.rc8"       # To provide the I18n translations on the Javascript
 
 source 'https://rails-assets.org' do
