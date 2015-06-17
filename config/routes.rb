@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  root 'home#index'
 
-  root 'lists#index'
   resources :lists
-  get 'autocomplete', to: 'lists#autocomplete', as: :autocomplete
+
+  get 'autocomplete', to: 'lists#autocomplete'
 end
