@@ -28,6 +28,7 @@ gem 'sprockets-coffee-react'          # Sprockets preprocessor for CJSX (Coffees
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'js-routes'                       # Brings Rails named routes to javascript
 gem 'simple_form'                     # Forms made easy
+gem 'enumerize'                       # Model field enumerize
 # gem "i18n-js", ">= 3.0.0.rc8"       # To provide the I18n translations on the Javascript
 
 source 'https://rails-assets.org' do

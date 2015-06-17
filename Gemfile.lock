@@ -122,6 +122,8 @@ GEM
     elasticsearch-transport (1.0.12)
       faraday
       multi_json
+    enumerize (0.11.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
@@ -330,6 +332,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   compass-rails
   devise
+  enumerize
   jbuilder (~> 2.0)
   jquery-rails
   js-routes

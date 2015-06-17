@@ -2,9 +2,13 @@ class List
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  extend Enumerize
+
   field :name, type: String
-  field :type, type: String
   field :tags, type: Array
+  field :type
+
+  enumerize :type, in: %w(todo task checklist wiki numbered bulleted), default: :todo
 
   private
 
