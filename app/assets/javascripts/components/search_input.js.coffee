@@ -4,18 +4,18 @@
 
   componentDidMount: ->
     @refs.tags.focus()
-    @_mountAddInput()
+    @_mountNewItemInput()
 
   getInitialState: ->
     tags: []
 
-  _onSubmit: (e) ->
-    @props.onFormSubmit(e)
+  _onSubmit: ->
+    @props.onFormSubmit(@state.tags)
 
-  _mountAddInput: ->
+  _mountNewItemInput: ->
     tagsNode = React.findDOMNode(@refs.tags)
-    tagsNode.innerHTML = tagsNode.innerHTML + React.renderToString(<AddInput />)
+    tagsNode.innerHTML = tagsNode.innerHTML + "<span id='newitem'></span>"
 
   render: ->
-    <ReactTagsInput onChange={@_onSubmit} onChangeInput={@_onComplete}
+    <ReactTagsInput onTagAdd={@_onSubmit} onTagRemove={@_onSubmit}
       valueLink={@linkState('tags')} ref='tags' placeholder='search' />

@@ -6,10 +6,11 @@
 
   componentDidMount: ->
     @_fetchLists({})
+    @_mountNewItemInput()
 
   _fetchLists: (data)->
     $.ajax
-      url: Routes.root_path()
+      url: Routes.lists_path()
       dataType: 'json'
       data: data
     .done @_fetchDataDone
@@ -27,6 +28,22 @@
   _handleOnSearchSubmit: (query) ->
     @_fetchLists
       q: query
+
+  _handleItemSubmit: (item) ->
+    alert item
+    $.ajax
+      url: Routes.new_list_path()
+      dataType: 'json'
+      type: 'POST'
+      data: item
+      success: ((data) ->
+        @setState data: data
+        return
+      ).bind(this)
+    .fail @_fetchDataFail
+
+  _mountNewItemInput: ->
+    React.render(<NewItemInput onItemSubmit={@_handleItemSubmit} />, document.getElementById('newitem'))
 
   render: ->
     listsNode = @state.lists.map (list) ->
