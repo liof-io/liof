@@ -10,6 +10,8 @@ class List
 
   enumerize :type, in: %w(todo task checklist wiki numbered bulleted), default: :todo
 
+  has_many :list_items
+
   private
 
   def self.search(query, options={})
