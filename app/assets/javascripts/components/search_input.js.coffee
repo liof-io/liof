@@ -4,7 +4,7 @@
 
   componentDidMount: ->
     @refs.tags.focus()
-    @_mountNewItemInput()
+    @_mountNewItemBox()
 
   getInitialState: ->
     tags: []
@@ -12,9 +12,9 @@
   _onSubmit: ->
     @props.onFormSubmit(@state.tags)
 
-  _mountNewItemInput: ->
+  _mountNewItemBox: ->
     tagsNode = React.findDOMNode(@refs.tags)
-    tagsNode.innerHTML = tagsNode.innerHTML + "<span id='newitem'></span>"
+    tagsNode.innerHTML = tagsNode.innerHTML + "<span id='new-item-box'></span>"
 
   render: ->
     <ReactTagsInput onTagAdd={@_onSubmit} onTagRemove={@_onSubmit}

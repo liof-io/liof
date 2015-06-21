@@ -6,7 +6,7 @@
 
   componentDidMount: ->
     @_fetchLists({})
-    @_mountNewItemInput()
+    @_mountItemInput()
 
   _fetchLists: (data)->
     $.ajax
@@ -42,8 +42,8 @@
       ).bind(this)
     .fail @_fetchDataFail
 
-  _mountNewItemInput: ->
-    React.render(<NewItemInput onItemSubmit={@_handleItemSubmit} />, document.getElementById('newitem'))
+  _mountItemInput: ->
+    React.render(<ItemInput onItemSubmit={@_handleItemSubmit} />, document.getElementById('new-item-box'))
 
   render: ->
     listsNode = @state.lists.map (list) ->
