@@ -203,6 +203,8 @@ GEM
       sprockets-rails
     rails-assets-jquery (2.1.4)
     rails-assets-react (0.13.3)
+    rails-assets-react-dnd (1.1.3)
+      rails-assets-react (>= 0.13.0, < 0.15.0)
     rails-assets-react-tagsinput (1.3.5)
       rails-assets-react (>= 0.13.0, < 0.14)
     rails-assets-typeahead.js (0.11.1)
@@ -341,6 +343,7 @@ DEPENDENCIES
   mongoid-slug
   pry
   rails
+  rails-assets-react-dnd!
   rails-assets-react-tagsinput!
   rails-assets-typeahead.js!
   react-rails

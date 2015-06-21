@@ -8,6 +8,7 @@
 #= require react
 #= require react_ujs
 #= require react-tagsinput
+#= require react-dnd
 #= require typeahead
 #= require typeahead-init
 #= require components
