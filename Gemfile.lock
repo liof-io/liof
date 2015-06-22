@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 7fa123bd6bb8870288c0a3ac1bdac4edd43a650a
-  specs:
-    active_model_serializers (0.10.0.rc1)
-      activemodel (>= 4.0)
-
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -323,7 +316,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers!
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   bootstrap-sass

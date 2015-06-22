@@ -25,7 +25,6 @@ gem 'bootstrap-sass'                  # Sass-powered version of Bootstrap
 gem 'autoprefixer-rails'              # Add browser vendor prefixes automatically
 gem 'react-rails'                     # Makes it easier to use React and JSX in your Ruby on Rails application
 gem 'sprockets-coffee-react'          # Sprockets preprocessor for CJSX (Coffeescript with React JSX markup)
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'js-routes'                       # Brings Rails named routes to javascript
 gem 'simple_form'                     # Forms made easy
 gem 'enumerize'                       # Model field enumerize
