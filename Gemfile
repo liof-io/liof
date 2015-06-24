@@ -31,6 +31,7 @@ gem 'enumerize'                       # Model field enumerize
 # gem "i18n-js", ">= 3.0.0.rc8"       # To provide the I18n translations on the Javascript
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-material-ui'      # React Components that Implement Google's Material Design
   gem 'rails-assets-typeahead.js'     # Fast and fully-featured autocomplete library
   gem 'rails-assets-react-tagsinput'  # Simple react.js component for inputing tags
   gem 'rails-assets-react-dnd'        # Drag and Drop for React
