@@ -35,6 +35,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-typeahead.js'     # Fast and fully-featured autocomplete library
   gem 'rails-assets-react-tagsinput'  # Simple react.js component for inputing tags
   gem 'rails-assets-react-dnd'        # Drag and Drop for React
+  gem 'rails-assets-react-select'     # A Select control built with and for React JS
 end
 
 group :development do
