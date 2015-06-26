@@ -1,5 +1,7 @@
 syntax: glob
 
+/node_modules
+
 # Ignore public files
 public/assets
 public/photo
