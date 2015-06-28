@@ -30,5 +30,12 @@ module Liof
 
     # React config
     config.react.addons = true
+
+    # Command line options used when running browserify
+    config.browserify_rails.commandline_options = [
+        '-t [ coffeeify --extension .coffee ]',
+        '-t [ reactify --extension .jsx ]',
+        '-t babelify'
+    ]
   end
 end
