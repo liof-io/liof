@@ -4,7 +4,6 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require js-routes
-#= require bootstrap-sprockets
 #= require react
 #= require react_ujs
 #= require react-tagsinput
