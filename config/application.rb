@@ -27,15 +27,5 @@ module Liof
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
-
-    # React config
-    config.react.addons = true
-
-    # Command line options used when running browserify
-    config.browserify_rails.commandline_options = [
-        '-t [ coffeeify --extension .coffee ]',
-        '-t [ reactify --extension .jsx ]',
-        '-t babelify'
-    ]
   end
 end

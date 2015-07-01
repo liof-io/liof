@@ -22,9 +22,9 @@ gem 'kaminari'                        # Paginator
 gem 'slim-rails'                      # Slim generators for Rails 3 and 4, no need to include gem "slim" in your Gemfile
 gem 'compass-rails'                   # Compass rails integration
 gem 'autoprefixer-rails'              # Add browser vendor prefixes automatically
-gem 'react-rails'                     # Makes it easier to use React and JSX in your Ruby on Rails application
-gem "browserify-rails"                # This library adds CommonJS module support to Sprockets (via Browserify)
-gem 'sprockets-coffee-react'          # Sprockets preprocessor for CJSX (Coffeescript with React JSX markup)
+# gem 'react-rails'                     # Makes it easier to use React and JSX in your Ruby on Rails application
+# gem "browserify-rails"                # This library adds CommonJS module support to Sprockets (via Browserify)
+# gem 'sprockets-coffee-react'          # Sprockets preprocessor for CJSX (Coffeescript with React JSX markup)
 gem 'js-routes'                       # Brings Rails named routes to javascript
 gem 'simple_form'                     # Forms made easy
 gem 'enumerize'                       # Model field enumerize
