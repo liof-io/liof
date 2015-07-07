@@ -1,12 +1,14 @@
-@Lists = React.createClass
+React = require('react')
+
+Lists = React.createClass
+  displayName: 'Lists',
 
   getInitialState: ->
     didFetchData: false
-    lists: []
+    lists: @props.lists
 
   componentDidMount: ->
-    @_fetchLists({})
-    @_mountItemInput()
+    # @_fetchLists({})
 
   _fetchLists: (data)->
     $.ajax
@@ -42,20 +44,16 @@
       ).bind(this)
     .fail @_fetchDataFail
 
-  _mountItemInput: ->
-    React.render(<ItemInput onItemSubmit={@_handleItemSubmit} />, document.getElementById('new-item-box'))
-
   render: ->
     listsNode = @state.lists.map (list) ->
-      <List key={list.id} data={list}/>
+      <List data={list}/>
 
     noDataNode =
       <div className='col-xs-12'>
         <h4>No list found...</h4>
       </div>
 
-    <div>
-      <SearchInput onFormSubmit={@_handleOnSearchSubmit}/>
+    <div>11111111123
       <br />
       <br />
       <div className='row'>
@@ -67,3 +65,8 @@
         }
       </div>
     </div>
+
+# React.render(<Lists />, document.body);
+
+window.Lists = Lists
+module.exports = Lists

@@ -1,4 +1,7 @@
-@List = React.createClass
+React = require('react')
+
+List = React.createClass
+  displayName: 'List',
 
   render: ->
     <div className='col-xs-6'>
@@ -19,3 +22,6 @@
         </ul>
       </div>
     </div>
+
+window.List = List
+module.exports = List
