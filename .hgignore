@@ -8,7 +8,7 @@ public/photo
 public/files
 
 # Ignore logfiles and tempfiles
-log/*.log
+*.log
 tmp
 rails_best_practices_output.html
 *~
