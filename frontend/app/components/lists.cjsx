@@ -66,7 +66,4 @@ Lists = React.createClass
       </div>
     </div>
 
-# React.render(<Lists />, document.body);
-
-window.Lists = Lists
 module.exports = Lists

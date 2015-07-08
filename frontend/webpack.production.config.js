@@ -5,10 +5,10 @@ var webpack = require('webpack');
  * This is the Webpack configuration file for production.
  */
 module.exports = {
-  entry: "./app/assets/javascripts/main",
+  entry: path.join(__dirname, "app/app"),
 
   output: {
-    path: path.join(__dirname, "app/assets/javascripts/"),
+    path: path.join(__dirname, "../app/assets/javascripts/"),
     filename: "bundle.js"
   },
 

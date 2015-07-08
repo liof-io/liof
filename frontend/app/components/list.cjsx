@@ -23,5 +23,4 @@ List = React.createClass
       </div>
     </div>
 
-window.List = List
 module.exports = List
