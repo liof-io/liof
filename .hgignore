@@ -1,6 +1,6 @@
 syntax: glob
 
-/node_modules
+*/node_modules
 
 # Ignore public files
 public/assets
