@@ -18,7 +18,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.jsx$/, loader: 'react-hot!babel-loader' },
+      { test: /\.js$|\.jsx$/, loader: 'react-hot!babel-loader' },
       { test: /\.cjsx$/, loader: 'coffee!cjsx' }
     ]
   },
