@@ -15,7 +15,7 @@ let LightTheme = {
   contentFontFamily: 'Roboto, sans-serif',
   getPalette() {
     return {
-      primary1Color: Colors.cyan500,
+      primary1Color: Colors.lightWhite,
       primary2Color: Colors.cyan700,
       primary3Color: Colors.cyan100,
       accent1Color: Colors.pinkA200,
@@ -32,7 +32,7 @@ let LightTheme = {
     let obj = {
       appBar: {
         color: palette.primary1Color,
-        textColor: Colors.darkWhite,
+        textColor: Colors.blueGrey700,
         height: spacing.desktopKeylineIncrement
       },
       button: {
