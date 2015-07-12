@@ -39,7 +39,8 @@
     "react": ">=0.13.3",
     "react-tools": ">=0.13.3",
     "react-router": ">=1.0.0-beta3",
-    "react-tap-event-plugin": "^0.1.7"
+    "react-tap-event-plugin": "^0.1.7",
+    "react-style": ">=0.5.5"
   },
   "scripts": {
     "server": "node server.js",

@@ -1,6 +1,9 @@
 React = require('react')
 mui = require('material-ui')
-AppBar = mui.AppBar
+
+{ AppBar, List, ListItem, ListDivider } = mui
+
+styles = require '../styles/main'
 
 module.exports = React.createClass
   displayName: 'Main'
@@ -11,4 +14,10 @@ module.exports = React.createClass
         title='liof'
         iconClassNameRight="muidocs-icon-navigation-expand-more"
         onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap}/>
+
+        <List>
+          <ListItem >First item</ListItem>
+          <ListItem >Second item</ListItem>
+        </List>
+        <ListDivider />
     </div>
