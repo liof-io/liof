@@ -15,7 +15,7 @@ let LightTheme = {
   contentFontFamily: 'Roboto, sans-serif',
   getPalette() {
     return {
-      primary1Color: Colors.lightWhite,
+      primary1Color: Colors.white,
       primary2Color: Colors.cyan700,
       primary3Color: Colors.cyan100,
       accent1Color: Colors.pinkA200,
