@@ -13,9 +13,10 @@ Add, manage, share any format lists
 1. Todo
 2. Task
 3. Checklist
-4. Wiki
-5. Numbered
-6. Bulleted
+4. Pricelist
+5. Wiki
+6. Numbered
+7. Bulleted
 
 # Requirements
 Liof requires the following software:
