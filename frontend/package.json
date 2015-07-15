@@ -30,7 +30,10 @@
     "coffee-loader": "^0.7.2",
     "react-hot-loader": "^1.2.7",
     "webpack": "^1.10.0",
-    "webpack-dev-server": "^1.10.1"
+    "webpack-dev-server": "^1.10.1",
+    "normalize.css": "^3.0.3",
+    "react-style": ">=0.5.5",
+    "react-flexr": ">=2.0.0"
   },
   "dependencies": {
     "coffee-script": ">=1.9.3",
@@ -39,8 +42,8 @@
     "react": ">=0.13.3",
     "react-tools": ">=0.13.3",
     "react-router": ">=1.0.0-beta3",
-    "react-tap-event-plugin": "^0.1.7",
-    "react-style": ">=0.5.5"
+    "react-tap-event-plugin": "^0.1.7"
+
   },
   "scripts": {
     "server": "node server.js",
