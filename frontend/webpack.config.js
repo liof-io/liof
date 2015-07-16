@@ -27,13 +27,11 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: 'react-hot!babel-loader' },
-      { test: /\.cjsx$/, exclude: /node_modules/, loader: 'react-hot!coffee!cjsx' },
-      { test: /\.coffee$/, exclude: /node_modules/, loader: 'react-hot!coffee' }
+      { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: 'react-hot!babel-loader' }
     ]
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.cjsx', '.coffee']
+    extensions: ['', '.js', '.jsx']
   }
 }

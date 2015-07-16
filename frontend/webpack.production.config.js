@@ -18,12 +18,11 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$|\.jsx$/, loader: 'react-hot!babel-loader' },
-      { test: /\.cjsx$/, loader: 'coffee!cjsx' }
+      { test: /\.js$|\.jsx$/, loader: 'react-hot!babel-loader' }
     ]
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.cjsx', '.coffee']
+    extensions: ['', '.js', '.jsx']
   }
 }
