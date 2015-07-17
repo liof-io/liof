@@ -1,15 +1,12 @@
 import StyleSheet from 'react-style';
 
-document.body.style.backgroundColor = '#EDEDED';
+document.body.style.backgroundColor = '#F9F9F9';
 
 export default StyleSheet.create({
 
   root: {
-    width: '100%'
-  },
-
-  active: {
-    width: '50%'
+    width: '960px',
+    margin: 'auto'
   }
 
 });

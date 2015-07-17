@@ -1,5 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
+var csswring = require('csswring');
+var autoprefixer = require('autoprefixer-core');
 
 /**
  * This is the Webpack configuration file for local development.
@@ -27,8 +29,13 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: 'react-hot!babel-loader?stage=0' }
+      { test: /\.css$/, loader: 'style!css!postcss' },
+      { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: 'react-hot!babel?stage=0' }
     ]
+  },
+
+  postcss: {
+    defaults: [autoprefixer, csswring]
   },
 
   resolve: {
