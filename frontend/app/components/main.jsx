@@ -1,9 +1,6 @@
 import React from 'react';
 import { AppBar, List, ListItem, ListDivider, Paper, FontIcon, Styles } from 'material-ui';
-import { Grid, Cell } from 'react-flexr';
 import styles from '../styles/main';
-import 'normalize.css';
-import 'react-flexr/styles.css';
 
 let Colors = Styles.Colors;
 
@@ -11,14 +8,14 @@ export default React.createClass({
 
   render() {
     let cell = (
-      <Cell size='5/12'>
-        <Paper>
-          <List>
-            <ListItem rightIcon={<FontIcon className="material-icons" color={Colors.red500}>star</FontIcon>}>First item</ListItem>
-            <ListItem>Second item</ListItem>
-          </List>
-        </Paper>
-      </Cell>
+        <div className="col-xs-6">
+          <Paper>
+            <List>
+              <ListItem rightIcon={<FontIcon className="material-icons" color={Colors.red500}>star</FontIcon>}>First item</ListItem>
+              <ListItem>Second item</ListItem>
+            </List>
+          </Paper>
+        </div>
     );
 
     return (
@@ -28,11 +25,10 @@ export default React.createClass({
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap}/>
 
-        <Grid>
+        <div className="row">
           { cell }
           { cell }
-          { cell }
-        </Grid>
+        </div>
 
         <ListDivider />
         <List>

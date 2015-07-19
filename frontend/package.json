@@ -34,7 +34,7 @@
     "react-style": ">=0.5.5",
     "normalize.css": "^3.0.3",
     "style-loader": "^0.12.3",
-    "css-loader": "^0.15.4"
+    "css-loader": "^0.15.5"
   },
   "dependencies": {
     "coffee-script": ">=1.9.3",
@@ -43,7 +43,8 @@
     "react": ">=0.13.3",
     "react-tools": ">=0.13.3",
     "react-router": ">=1.0.0-beta3",
-    "react-tap-event-plugin": "^0.1.7"
+    "react-tap-event-plugin": "^0.1.7",
+    "flexboxgrid": "^6.2.0"
   },
   "scripts": {
     "server": "node server.js",
