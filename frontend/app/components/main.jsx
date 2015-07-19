@@ -9,9 +9,9 @@ export default React.createClass({
 
   render() {
     let cell = (
-      <Cell min={400}>
-        <Paper>
-          <List styles={styles.list}>
+      <Cell min={384}>
+        <Paper zDepth={0}>
+          <List style={styles.list}>
             <ListItem rightIcon={<FontIcon className="material-icons" color={Colors.red500}>star</FontIcon>}>First item</ListItem>
             <ListItem>Second item</ListItem>
           </List>
@@ -20,40 +20,23 @@ export default React.createClass({
     );
 
     return (
-      <div styles={styles.root}>
-        <AppBar styles={styles.appbar}
+      <div style={styles.root}>
+        <AppBar
           title='liof'
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap}/>
 
-        <div styles={styles.grid}>
-          <Grid gutter={20}>
+        <div style={styles.content}>
+          <Grid gutter={16}>
             { cell }
             { cell }
           </Grid>
-          <Grid gutter={20}>
+          <Grid gutter={16}>
             { cell }
-            <Cell min={400}/>
+            <Cell min={384}/>
           </Grid>
 
         </div>
-
-        <Paper>
-          <List>
-            <ListItem rightIcon={<FontIcon className="material-icons" color={Colors.red500}>star</FontIcon>}>First item</ListItem>
-            <ListItem>Second item</ListItem>
-          </List>
-        </Paper>
-        <ListDivider />
-        <List>
-          <ListItem>First item</ListItem>
-            <ListItem primaryText="Inbox" open={true}>
-              <ListItem primaryText="Starred" />
-              <ListItem primaryText="Sent Mail">
-                <ListItem primaryText="Drafts" />
-              </ListItem>
-          </ListItem>
-        </List>
       </div>
     );
   }
