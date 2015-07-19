@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, List, ListItem, ListDivider, Paper, FontIcon, Styles } from 'material-ui';
+import { Grid, Cell } from 'rgx';
 import styles from '../styles/main';
 
 let Colors = Styles.Colors;
@@ -8,33 +9,41 @@ export default React.createClass({
 
   render() {
     let cell = (
-        <div className="col-xs-6">
-          <Paper>
-            <List>
-              <ListItem rightIcon={<FontIcon className="material-icons" color={Colors.red500}>star</FontIcon>}>First item</ListItem>
-              <ListItem>Second item</ListItem>
-            </List>
-          </Paper>
-        </div>
+      <Cell min={400}>
+        <Paper>
+          <List styles={styles.list}>
+            <ListItem rightIcon={<FontIcon className="material-icons" color={Colors.red500}>star</FontIcon>}>First item</ListItem>
+            <ListItem>Second item</ListItem>
+          </List>
+        </Paper>
+      </Cell>
     );
 
     return (
       <div styles={styles.root}>
-        <AppBar
+        <AppBar styles={styles.appbar}
           title='liof'
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap}/>
 
-        <div className="row">
-          { cell }
-          { cell }
+        <div styles={styles.grid}>
+          <Grid gutter={20}>
+            { cell }
+            { cell }
+          </Grid>
+          <Grid gutter={20}>
+            { cell }
+            <Cell min={400}/>
+          </Grid>
+
         </div>
 
-        <ListDivider />
-        <List>
-          <ListItem rightIcon={<FontIcon className="material-icons" color={Colors.red500}>star</FontIcon>}>First item</ListItem>
-          <ListItem>Second item</ListItem>
-        </List>
+        <Paper>
+          <List>
+            <ListItem rightIcon={<FontIcon className="material-icons" color={Colors.red500}>star</FontIcon>}>First item</ListItem>
+            <ListItem>Second item</ListItem>
+          </List>
+        </Paper>
         <ListDivider />
         <List>
           <ListItem>First item</ListItem>

@@ -1,7 +1,5 @@
 import React from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import 'normalize.css';
-import 'flexboxgrid';
 import { Styles } from 'material-ui';
 import LiofTheme from './styles/themes/liof';
 import Main from './components/main';
