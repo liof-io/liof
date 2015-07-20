@@ -1,24 +1,27 @@
 import StyleSheet from 'react-style';
 import { Styles } from 'material-ui';
 
-let { Spacing } = Styles;
-
-document.body.style.backgroundColor = '#F9F9F9';
+let { Typography, Spacing } = Styles;
 
 export default StyleSheet.create({
 
   root: {
+    fontWeight: Typography.fontWeightLight,
     maxWidth: '1000px',
-    margin: 'auto',
-    padding: '0 8px'
+    margin: 'auto'
   },
 
   content: {
-    margin: `${Spacing.desktopGutterMini}px auto`
+    marginTop: Spacing.desktopGutterMini,
+    marginBottom: Spacing.desktopGutter,
   },
 
   list: {
-    margin: `${Spacing.desktopGutterMini}px auto`
+    marginTop: Spacing.desktopGutter
+  },
+
+  listitem: {
+    padding: `0 ${Spacing.desktopGutterLess}px`
   }
 
 });
