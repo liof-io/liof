@@ -18,7 +18,7 @@ let LightTheme = {
       primary1Color: Colors.white,
       primary2Color: Colors.cyan700,
       primary3Color: Colors.cyan100,
-      accent1Color: Colors.pinkA200,
+      accent1Color: Colors.amber300,
       accent2Color: Colors.pinkA400,
       accent3Color: Colors.pinkA100,
       textColor: Colors.darkBlack,
@@ -191,7 +191,7 @@ let LightTheme = {
         floatingLabelColor: palette.textColor,
         disabledTextColor: palette.disabledColor,
         errorColor: Colors.red500,
-        focusColor: palette.primary1Color,
+        focusColor: Colors.lightGreen200,
         backgroundColor: 'transparent',
         borderColor: palette.borderColor
       }
