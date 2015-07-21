@@ -5,7 +5,7 @@ let { Typography, Spacing } = Styles;
 
 export default StyleSheet.create({
 
-  title: {
+  appBar: {
     fontFamily: 'And Black, Helvetica, Arial, sans-serif',
     fontWeight: Typography.fontWeightLight
   },

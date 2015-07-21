@@ -1,8 +1,7 @@
 import React from 'react';
-import { IconButton, List, ListItem, ListDivider, Paper, FontIcon, Styles } from 'material-ui';
+import { IconButton, List, ListItem, ListDivider, Paper, Checkbox, FontIcon, Styles } from 'material-ui';
 import { Grid, Cell } from 'rgx';
-import AppBar from './app-bar';
-import Toolbar from './toolbar';
+import { AppBar, TabBar } from '../components';
 import styles from '../styles/main';
 
 let Colors = Styles.Colors;
@@ -24,8 +23,12 @@ export default React.createClass({
     return (
       <div style={styles.root}>
 
-        <AppBar/>
-        <Toolbar/>
+        <div style={styles.header}>
+          <div style={styles.center}>
+            <AppBar/>
+            <TabBar/>
+          </div>
+        </div>
 
         <div style={styles.content}>
           <Grid gutter={16}>
@@ -36,7 +39,27 @@ export default React.createClass({
             { cell }
             <Cell min={384}/>
           </Grid>
+
+          <br />
+          <List subheader="Hangout notifications">
+            <ListItem
+              leftCheckbox={<Checkbox />} >
+              Notifications
+            </ListItem>
+            <ListItem
+              leftCheckbox={<Checkbox />}
+              secondaryText="Hangouts message">
+              Sounds
+            </ListItem>
+            <ListItem
+              leftCheckbox={<Checkbox />}
+              secondaryText="Hangouts video call">
+              Video sounds
+            </ListItem>
+          </List>
+
         </div>
+
       </div>
     );
   }
