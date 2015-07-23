@@ -6,20 +6,23 @@ export default React.createClass({
 
   render() {
     return (
-      <Tabs>
+      <Tabs style={styles.tabs}>
         <Tab
-          label='Inbox'
+          label='Lists'
           route='inbox'
           style={styles.tab}
           onActive={this._onActive} />
         <Tab
-          label='Frogs'
+          label='Liof feed'
           style={styles.tab} />
         <Tab
-          label='Last'
+          label='Report'
           style={styles.tab} />
         <Tab
-          label='Social'
+          label='Activity'
+          style={styles.tab} />
+        <Tab
+          label='Tags'
           style={styles.tab} />
       </Tabs>
     );

@@ -1,17 +1,18 @@
 import StyleSheet from 'react-style';
 import { Styles } from 'material-ui';
 
-let { Typography, Spacing } = Styles;
+let { Typography } = Styles;
 
 export default StyleSheet.create({
 
   appBar: {
     fontFamily: 'And Black, Helvetica, Arial, sans-serif',
-    fontWeight: Typography.fontWeightLight
+    fontWeight: Typography.fontWeightLight,
+    border: '1px solid grey'
   },
 
-  search: {
-    fontSize: '21px'
-  }
+  // rightElement: {
+  //   margin: 'auto'
+  // }
 
 });

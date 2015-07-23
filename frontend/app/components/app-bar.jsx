@@ -1,5 +1,6 @@
 import React from 'react';
-import { AppBar, Avatar, TextField, IconButton, FontIcon } from 'material-ui';
+import { AppBar } from 'material-ui';
+import SearchField from '../components/search-field';
 import styles from '../styles/app-bar';
 
 export default React.createClass({
@@ -8,12 +9,12 @@ export default React.createClass({
     return (
       <AppBar
         title='Liof'
-        iconElementRight={<IconButton iconClassName="material-icons">expand_more</IconButton>}
         onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap}
         style={styles.appBar}
         zDepth={0}>
 
-        <TextField style={styles.search} hintText="Liof search" />
+        <SearchField/>
+
       </AppBar>
     );
   }

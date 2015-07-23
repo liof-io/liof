@@ -14,20 +14,19 @@ export default StyleSheet.create({
   },
 
   center: {
-    maxWidth: '1000px',
+    maxWidth: 1000,
     margin: 'auto'
   },
 
   content: {
     marginTop: Spacing.desktopGutterMini,
     marginBottom: Spacing.desktopGutter,
-    maxWidth: '1000px',
+    maxWidth: 1000,
     margin: 'auto'
   },
 
   list: {
-    marginTop: Spacing.desktopGutter,
-    // border: `1px solid ${Colors.grey300}`
+    marginTop: Spacing.desktopGutter
   },
 
   listitem: {
