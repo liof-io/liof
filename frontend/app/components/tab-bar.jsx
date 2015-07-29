@@ -6,7 +6,7 @@ export default React.createClass({
 
   render() {
     return (
-      <Tabs style={styles.tabs}>
+      <Tabs tabItemContainerStyle={styles.tabContainer} style={styles.tabs}>
         <Tab
           label='Lists'
           route='inbox'
