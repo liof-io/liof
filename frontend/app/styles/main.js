@@ -14,14 +14,14 @@ export default StyleSheet.create({
   },
 
   center: {
-    maxWidth: 1000,
+    maxWidth: 900,
     margin: 'auto'
   },
 
   content: {
     marginTop: Spacing.desktopGutterMini,
     marginBottom: Spacing.desktopGutter,
-    maxWidth: 1000,
+    maxWidth: 900,
     margin: 'auto'
   },
 
