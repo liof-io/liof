@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 /**
  * This is the Webpack configuration file for local development.
@@ -22,12 +23,14 @@ module.exports = {
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin('styles.css')
   ],
 
   module: {
     loaders: [
       { test: /\.css$/, loader: 'style!css' },
+      { test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader') },
       { test: /\.js$|\.jsx$/, exclude: /node_modules/, loader: 'react-hot!babel?stage=0' }
     ]
   },
