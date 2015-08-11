@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextField, IconButton, FontIcon } from 'material-ui';
 import Select from 'react-select';
-import '../styles/react-select/default.less';
+import '../styles/react-select/index.less';
 
 export default class SearchField extends React.Component {
 

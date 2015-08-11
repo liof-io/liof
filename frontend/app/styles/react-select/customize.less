@@ -1,0 +1,58 @@
+.Select {
+  margin: auto;
+  width: 705px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: @select-item-font-size;
+  border: 0;
+}
+
+.Select-control {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0px solid @select-input-border-color;
+  cursor: text;
+  padding: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.Select-clear {
+  font-size: @select-item-font-size + 2;
+  right: @select-padding-horizontal + @select-arrow-width + 5;
+}
+
+.is-focused:not(.is-open) > .Select-control {
+  box-shadow: none;
+}
+
+.Select-menu-outer {
+  margin-top: 2px;
+  border-radius: 2px;
+  border: 0;
+  padding: 8px 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+.Select-item-label {
+  font-weight: 400;
+  .border-right-radius( 0 );
+  .border-left-radius( @select-item-border-radius );
+  padding-right: @select-item-padding-horizontal - 3;
+}
+
+.Select-item-icon {
+  float: right;
+  .border-left-radius( 0 );
+  .border-right-radius( @select-item-border-radius );
+  border-right: 0;
+  color: @select-input-border-color;
+  font-size: @select-item-font-size + 1;
+
+  &:active {
+    background-color: white;
+    font-weight: 400;
+  }
+}
