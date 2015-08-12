@@ -1,5 +1,4 @@
 import React from 'react';
-import { TextField, IconButton, FontIcon } from 'material-ui';
 import Select from 'react-select';
 import '../styles/react-select/index.less';
 
@@ -13,6 +12,7 @@ export default class SearchField extends React.Component {
 
     return (
       <Select
+        name="q"
         allowCreate={true}
         placeholder="Search"
         multi={true}
