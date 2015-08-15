@@ -1,16 +1,16 @@
 import React from 'react';
 import { AppBar } from 'material-ui';
-import SearchField from '../components/search-field';
-import styles from '../styles/app-bar';
+import { SearchField } from './';
+import styles from '../../styles/header/header-bar';
 
-export default React.createClass({
+export default class HeaderBar extends React.Component {
 
   render() {
     return (
       <AppBar
         title='Liof'
         onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap}
-        style={styles.appBar}
+        style={styles.headerBar}
         zDepth={0}>
 
         <SearchField/>
@@ -18,4 +18,4 @@ export default React.createClass({
       </AppBar>
     );
   }
-});
+}

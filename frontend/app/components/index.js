@@ -1,4 +1,5 @@
-module.exports = {
-  AppBar: require('./app-bar'),
-  TabBar: require('./tab-bar')
-};
+export default ({
+  Main: require('./main'),
+  Lists: require('./lists'),
+  Activity: require('./activity')
+});

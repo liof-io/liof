@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import '../styles/react-select/index.less';
+import '../../styles/react-select/index.less';
 
 export default class SearchField extends React.Component {
 

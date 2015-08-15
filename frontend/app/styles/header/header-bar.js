@@ -5,10 +5,10 @@ let { Typography } = Styles;
 
 export default StyleSheet.create({
 
-  appBar: {
+  headerBar: {
     fontFamily: 'And Black, Helvetica, Arial, sans-serif',
     fontWeight: Typography.fontWeightLight,
-    border: '1px solid grey'
+    border: '0px solid grey'
   },
 
   // rightElement: {
