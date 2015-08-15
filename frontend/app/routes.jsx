@@ -1,16 +1,13 @@
 import React from 'react';
-import { Route, Redirect, DefaultRoute } from 'react-router';
+import { Router, Route } from 'react-router';
+import { history } from 'react-router/lib/HashHistory';
+import { Main, Lists, Activity } from './components';
 
-import Main from './components/main';
-import { AppBar, TabBar } from './components';
-
-let Routes = (
-  <Route name="root" path="/" handler={Main}>
-    <Route name="app-bar" handler={AppBar} />
-    <Route name="tab-bar" handler={TabBar} />
-
-    <DefaultRoute handler={Main}/>
-  </Route>
+export default (
+  <Router history={history}>
+    <Route path="/" component={Main}>
+      <Route path="lists" component={Lists} />
+      <Route path="activity" component={Activity} />
+    </Route>
+  </Router>
 );
-
-module.exports = Routes;
