@@ -1,10 +1,11 @@
 import React from 'react';
+import BaseComponent from './base';
 import { Grid, Cell } from 'rgx';
 import styles from '../styles/lists';
 import { IconButton, List, ListItem, ListDivider, Paper, Checkbox, FontIcon, Styles } from 'material-ui';
 const Colors = Styles.Colors;
 
-export default class Lists extends React.Component {
+export default class Lists extends BaseComponent {
 
   render() {
     const cell = (

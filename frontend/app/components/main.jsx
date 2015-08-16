@@ -1,24 +1,9 @@
 import React from 'react';
-import Header from './header/header';
-import { Styles } from 'material-ui';
-import LiofTheme from '../styles/themes/liof';
+import BaseComponent from './base';
+import { Header } from './header';
 import styles from '../styles/main';
 
-const ThemeManager = new Styles.ThemeManager();
-ThemeManager.setTheme(LiofTheme);
-
-export default class Main extends React.Component {
-
-  static childContextTypes = {
-    muiTheme: React.PropTypes.object
-  }
-
-  getChildContext() {
-    return {
-      muiTheme: ThemeManager.getCurrentTheme()
-    }
-  }
-
+export default class Main extends BaseComponent {
   render() {
     return (
       <div style={styles.root}>
