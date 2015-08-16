@@ -1,5 +1,4 @@
 import StyleSheet from 'react-style';
-import { Styles } from 'material-ui';
 
 export default StyleSheet.create({
 

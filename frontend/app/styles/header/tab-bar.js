@@ -1,8 +1,7 @@
 import StyleSheet from 'react-style';
-import { Styles } from 'material-ui';
+import { Colors } from 'material-ui/lib/styles';
 
-let { Colors } = Styles;
-let tabBarHeight = 48
+const tabBarHeight = 48
 
 export default StyleSheet.create({
 

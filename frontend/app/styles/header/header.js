@@ -1,7 +1,5 @@
 import StyleSheet from 'react-style';
-import { Styles } from 'material-ui';
-
-let { Colors } = Styles;
+import { Colors } from 'material-ui/lib/styles';
 
 export default StyleSheet.create({
 

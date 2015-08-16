@@ -33,18 +33,17 @@
     "style-loader": ">=0.12.3",
     "css-loader": ">=0.15.6",
     "less-loader": ">=2.2.0",
+    "react-tap-event-plugin": ">=0.1.7",
     "react-style": ">=0.5.5",
     "extract-text-webpack-plugin": "^0.8.2",
     "react-router": ">=1.0.0-beta3",
     "react-mixin": ">=1.7.0"
   },
   "dependencies": {
+    "react": "^0.13.3",
     "material-ui": ">=0.10.4",
-    "react": ">=0.13.3",
-    "react-tap-event-plugin": ">=0.1.7",
-    "rgx": ">=0.2.1",
-    "react-select": ">=0.6.1"
-
+    "react-select": ">=0.6.1",
+    "rgx": ">=0.2.1"
   },
   "scripts": {
     "server": "node server.js",

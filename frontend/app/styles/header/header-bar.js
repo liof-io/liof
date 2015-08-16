@@ -1,7 +1,5 @@
 import StyleSheet from 'react-style';
-import { Styles } from 'material-ui';
-
-let { Typography } = Styles;
+import { Typography } from 'material-ui/lib/styles';
 
 export default StyleSheet.create({
 
