@@ -2,7 +2,7 @@ import React from 'react';
 import reactMixin from 'react-mixin';
 import { Navigation } from 'react-router';
 import { Tabs, Tab } from 'material-ui';
-import Activity from '../activity';
+import Activity from '../';
 import styles from '../../styles/header/tab-bar';
 
 @reactMixin.decorate(Navigation)
@@ -11,10 +11,9 @@ export default class TabBar extends React.Component {
 
   constructor() {
     super();
-    this._onActive = this._onActive.bind(this);
   }
 
-  _onActive(tab){
+  _onActive = (tab) => {
     this.transitionTo(tab.props.route)
   }
 

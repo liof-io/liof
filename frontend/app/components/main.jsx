@@ -1,6 +1,6 @@
 import React from 'react';
 import BaseComponent from './base';
-import { Header } from './header';
+import { Header } from './';
 import styles from '../styles/main';
 
 export default class Main extends BaseComponent {

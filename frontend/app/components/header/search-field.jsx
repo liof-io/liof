@@ -20,5 +20,4 @@ export default class SearchField extends React.Component {
         options={options} />
     );
   }
-
 }
