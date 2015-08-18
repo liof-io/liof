@@ -2,7 +2,6 @@ import React from 'react';
 import reactMixin from 'react-mixin';
 import { Navigation } from 'react-router';
 import { Tabs, Tab } from 'material-ui';
-import Activity from '../';
 import styles from '../../styles/header/tab-bar';
 
 @reactMixin.decorate(Navigation)
@@ -27,7 +26,7 @@ export default class TabBar extends React.Component {
             style={styles.tab}
             onActive={this._onActive} />
           <Tab
-            label='Liof feed'
+            label='Feed'
             style={styles.tab} />
           <Tab
             label='Report'
@@ -40,6 +39,11 @@ export default class TabBar extends React.Component {
           <Tab
             label='Tags'
             style={styles.tab} />
+          <Tab
+            label='Team'
+            route='team'
+            style={styles.tab}
+            onActive={this._onActive} />
         </Tabs>
       </div>
     );
