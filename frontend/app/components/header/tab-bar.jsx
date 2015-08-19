@@ -6,46 +6,45 @@ import styles from '../../styles/header/tab-bar';
 
 @reactMixin.decorate(Navigation)
 
-export default class TabBar extends React.Component {
-
+class TabBar extends React.Component {
   constructor() {
     super();
+
+    this.tabs = {
+      default: [
+        'lists',
+        'feed',
+        'report',
+        'activity',
+        'tags',
+        'team'
+      ]
+    };
   }
 
-  _onActive = (tab) => {
-    this.transitionTo(tab.props.route)
+  _onActive = (activetab) => {
+    this.transitionTo(activetab.props.route)
   }
 
   render() {
     return (
       <div>
         <Tabs tabItemContainerStyle={styles.tabContainer} style={styles.tabs}>
-          <Tab
-            label='Lists'
-            route='lists'
-            style={styles.tab}
-            onActive={this._onActive} />
-          <Tab
-            label='Feed'
-            style={styles.tab} />
-          <Tab
-            label='Report'
-            style={styles.tab} />
-          <Tab
-              label='Activity'
-              route='activity'
-              style={styles.tab}
-              onActive={this._onActive} />
-          <Tab
-            label='Tags'
-            style={styles.tab} />
-          <Tab
-            label='Team'
-            route='team'
-            style={styles.tab}
-            onActive={this._onActive} />
+          {
+            this.tabs.default.map(tab =>
+              <Tab
+                key={tab}
+                label={tab}
+                route={tab}
+                style={styles.tab}
+                onActive={this._onActive}
+              />
+            )
+          }
         </Tabs>
       </div>
     );
   }
 }
+
+export default TabBar;
