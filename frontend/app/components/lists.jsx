@@ -3,9 +3,14 @@ import BaseComponent from './base';
 import { Grid, Cell } from 'rgx';
 import styles from '../styles/lists';
 import { IconButton, List, ListItem, ListDivider, Paper, Checkbox, FontIcon, Styles } from 'material-ui';
+import ActionCheckCircle from 'material-ui/lib/svg-icons/action/check-circle';
 const Colors = Styles.Colors;
 
 export default class Lists extends BaseComponent {
+
+  constructor() {
+    super();
+  }
 
   render() {
     const cell = (
@@ -34,7 +39,7 @@ export default class Lists extends BaseComponent {
         <br />
         <List subheader="Hangout notifications">
           <ListItem
-            leftCheckbox={<Checkbox />} >
+            leftCheckbox={<Checkbox unCheckedIcon={<ActionCheckCircle />}/>} >
             Notifications
           </ListItem>
           <ListItem
