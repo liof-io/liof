@@ -3,7 +3,6 @@ import BaseComponent from './base';
 import { Grid, Cell } from 'rgx';
 import styles from '../styles/lists';
 import { IconButton, List, ListItem, Paper, Styles } from 'material-ui';
-import ActionCheckCircle from 'material-ui/lib/svg-icons/action/check-circle';
 const Colors = Styles.Colors;
 
 export default class Lists extends BaseComponent {
