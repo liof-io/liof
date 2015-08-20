@@ -3,12 +3,6 @@ Add, manage, share any format lists
 
 [![Code Climate](https://codeclimate.com/github/liof-io/liof/badges/gpa.svg)](https://codeclimate.com/github/liof-io/liof)
 
-# Built with
-- Ruby on Rails
-- Elasticsearch
-- MongoDB
-- React
-
 # List formats
 1. Todo
 2. Task
@@ -17,6 +11,20 @@ Add, manage, share any format lists
 5. Wiki
 6. Numbered
 7. Bulleted
+
+# Features
+- Morphology live search
+- Team work
+- Time report
+- All changes history
+- Sharing, likes, comments
+- Gamification
+
+# Built with
+- Ruby on Rails
+- Elasticsearch
+- MongoDB
+- React
 
 # Requirements
 Liof requires the following software:
