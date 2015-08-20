@@ -6,7 +6,7 @@ import styles from '../../styles/header/tab-bar';
 
 @reactMixin.decorate(Navigation)
 
-class TabBar extends React.Component {
+export default class TabBar extends React.Component {
   constructor() {
     super();
 
@@ -31,7 +31,7 @@ class TabBar extends React.Component {
       <div>
         <Tabs tabItemContainerStyle={styles.tabContainer} style={styles.tabs}>
           {
-            this.tabs.default.map(tab =>
+            this.tabs.default.map((tab) =>
               <Tab
                 key={tab}
                 label={tab}
@@ -46,5 +46,3 @@ class TabBar extends React.Component {
     );
   }
 }
-
-export default TabBar;
