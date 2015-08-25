@@ -7,19 +7,28 @@ import styles from '../../styles/header/tab-bar';
 @reactMixin.decorate(Navigation)
 
 export default class TabBar extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.tabs = {
-      default: [
-        'lists',
-        'feed',
-        'report',
-        'activity',
-        'tags',
-        'team'
+      defaults: [
+        'Lists',
+        'Feed',
+        'Report',
+        'Activity',
+        'Tags',
+        'Team'
       ]
     };
+
+    this.defaultRoute = 'Lists'
+  }
+
+  getRoute(route) {
+    if (route == this.defaultRoute) {
+      return '/';
+    }
+    return route.toLowerCase();
   }
 
   _onActive = (activetab) => {
@@ -31,11 +40,11 @@ export default class TabBar extends React.Component {
       <div>
         <Tabs tabItemContainerStyle={styles.tabContainer} style={styles.tabs}>
           {
-            this.tabs.default.map((tab) =>
+            this.tabs.defaults.map((tab) =>
               <Tab
                 key={tab}
                 label={tab}
-                route={tab}
+                route={this.getRoute(tab)}
                 style={styles.tab}
                 onActive={this._onActive}
               />
