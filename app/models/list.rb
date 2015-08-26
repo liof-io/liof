@@ -10,7 +10,7 @@ class List
 
   enumerize :type, in: %w(todo task checklist pricelist wiki numbered bulleted), default: :todo
 
-  has_many :list_items
+  has_many :items
 
   private
 
