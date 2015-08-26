@@ -1,16 +1,7 @@
 import StyleSheet from 'react-style';
-import { Styles } from 'material-ui';
-
-let { Spacing } = Styles;
+import { Spacing } from 'material-ui/lib/styles';
 
 export default StyleSheet.create({
-
-  content: {
-    marginTop: Spacing.desktopGutterMini,
-    marginBottom: Spacing.desktopGutter,
-    maxWidth: 900,
-    margin: 'auto'
-  },
 
   list: {
     marginTop: Spacing.desktopGutter,
