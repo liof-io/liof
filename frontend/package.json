@@ -41,8 +41,11 @@
   "dependencies": {
     "react": "^0.13.3",
     "react-router": ">=1.0.0-beta3",
-    "material-ui": ">=0.10.4",
+    "react-redux": ">=1.0.1",
+    "redux": ">=1.0.1",
     "react-select": ">=0.6.1",
+    "immutable": "^3.7.4",
+    "material-ui": ">=0.10.4",
     "rgx": ">=0.2.1"
   },
   "scripts": {
