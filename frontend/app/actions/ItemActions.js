@@ -1,9 +1,19 @@
+import request from 'axios';
 import * as types from '../constants/ActionTypes';
+
+const API_URL = 'https://localhost:3000/lists';
+
+export function receiveItems() {
+  return {
+    type: types.RECEIVE_ITEMS,
+    promise: request.get(API_URL)
+  }
+}
 
 export function createItem(text) {
   return {
     type: types.CREATE_ITEM,
-    text
+    promise: request.post(API_URL, { text })
   };
 }
 
