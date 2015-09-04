@@ -8,13 +8,12 @@ export default class HeaderBar extends React.Component {
   render() {
     return (
       <AppBar
-        title='Liof'
+        title="Liof"
         onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap}
         style={styles.headerBar}
-        zDepth={0}>
-
-        <SearchField/>
-
+        zDepth={0}
+      >
+        <SearchField />
       </AppBar>
     );
   }

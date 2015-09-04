@@ -17,7 +17,8 @@ export default class SearchField extends React.Component {
         placeholder="Search"
         multi={true}
         delimiter=","
-        options={options} />
+        options={options}
+      />
     );
   }
 }

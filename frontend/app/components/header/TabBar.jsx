@@ -31,8 +31,8 @@ export default class TabBar extends React.Component {
     return route.toLowerCase();
   }
 
-  _onActive = (activetab) => {
-    this.transitionTo(activetab.props.route)
+  handleActive = (tab) => {
+    this.transitionTo(tab.props.route)
   }
 
   render() {
@@ -46,7 +46,7 @@ export default class TabBar extends React.Component {
                 label={tab}
                 route={this.getRoute(tab)}
                 style={styles.tab}
-                onActive={this._onActive}
+                onActive={this.handleActive}
               />
             )
           }

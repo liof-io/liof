@@ -9,8 +9,8 @@ export default class Header extends React.Component {
     return (
       <div style={styles.header}>
         <div style={styles.center}>
-          <HeaderBar/>
-          <TabBar/>
+          <HeaderBar />
+          <TabBar />
         </div>
       </div>
     );
