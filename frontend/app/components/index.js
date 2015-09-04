@@ -1,8 +1,8 @@
 /* layout */
 export Main from './main';
-export Header from './header/Header';
+export Header from './Header';
 
 /* tab views */
-export Lists from './lists/Lists';
-export Activity from './activity/Activity';
-export Team from './users/Team';
+export Lists from './Lists';
+export Activity from './Activity';
+export Team from './Users';

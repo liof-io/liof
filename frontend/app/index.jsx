@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 import { history } from 'react-router/lib/HashHistory';
-import configureStore from '../store/configureStore';
+import configureStore from './store/configureStore';
 import routes from './routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar } from 'material-ui';
-import { SearchField } from './';
+import SearchField from './SearchField';
 import styles from '../../styles/header/header-bar';
 
 export default class HeaderBar extends React.Component {

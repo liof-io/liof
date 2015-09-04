@@ -1,5 +1,6 @@
 import React from 'react';
-import { HeaderBar, TabBar } from './';
+import HeaderBar from './HeaderBar';
+import TabBar from './TabBar';
 import styles from '../../styles/header/header';
 
 export default class Header extends React.Component {

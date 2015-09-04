@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseComponent from './base';
+import BaseComponent from './Base';
 import { Header } from './';
 import { bindActionCreators } from 'redux';
 import * as ItemActions from '../actions/ItemActions';
@@ -14,6 +14,7 @@ export default class Main extends BaseComponent {
     return (
       <div style={styles.root}>
         <Header/>
+
         {this.props.children}
       </div>
     );
