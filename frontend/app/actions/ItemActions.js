@@ -1,25 +1,31 @@
 import request from 'axios';
-import * as types from '../constants/ActionTypes';
+
+export const RECEIVE_ITEMS  = 'RECEIVE_ITEMS';
+export const REQUEST_ITEMS  = 'REQUEST_ITEMS';
+export const CREATE_ITEM    = 'CREATE_ITEM';
+export const EDIT_ITEM      = 'EDIT_ITEM';
+export const DELETE_ITEM    = 'DELETE_ITEM';
+export const COMPLETE_ITEM  = 'COMPLETE_ITEM';
 
 const API_URL = 'https://localhost:3000/lists';
 
 export function receiveItems() {
   return {
-    type: types.RECEIVE_ITEMS,
+    type: RECEIVE_ITEMS,
     promise: request.get(API_URL)
   }
 }
 
 export function createItem(text) {
   return {
-    type: types.CREATE_ITEM,
+    type: CREATE_ITEM,
     promise: request.post(API_URL, { text })
   };
 }
 
 export function editItem(id, text) {
   return {
-    type: types.EDIT_ITEM,
+    type: EDIT_ITEM,
     id,
     text
   };
@@ -27,14 +33,14 @@ export function editItem(id, text) {
 
 export function deleteItem(id) {
   return {
-    type: types.DELETE_ITEM,
+    type: DELETE_ITEM,
     id
   };
 }
 
 export function completeItem(id) {
   return {
-    type: types.COMPLETE_ITEM,
+    type: COMPLETE_ITEM,
     id
   };
 }
