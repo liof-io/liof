@@ -1,11 +1,13 @@
 import React from 'react';
-import { Route } from 'react-router';
-import { App, Lists, Activity, Users } from './components';
+import { Route, Redirect } from 'react-router';
+import Root from './containers/Root';
+import { Lists, Activity, Users } from './components';
 
 export default (
-  <Route component={App}>
-    <Route path="/" component={Lists} />
+  <Route component={Root}>
+    <Route path="lists" component={Lists} />
     <Route path="activity" component={Activity} />
     <Route path="team" component={Users} />
+    <Redirect from='/' to='/lists' />
   </Route>
 );
