@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
-import { history } from 'react-router/lib/HashHistory';
+import { history } from 'react-router/lib/BrowserHistory';
 import configureStore from './store/configureStore';
 import routes from './routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -12,9 +12,7 @@ injectTapEventPlugin();
 
 React.render(
   <Provider store={store}>
-    {() =>
-      <Router children={routes} history={history} />
-    }
+     {() => <Router history={history} routes={routes} /> }
   </Provider>,
-  document.body
+  document.getElementById('app')
 );
