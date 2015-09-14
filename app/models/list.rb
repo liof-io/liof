@@ -14,6 +14,7 @@ class List
 
   private
 
+
   def self.search(query, options={})
     List.any_of(name: /.*#{query}.*/)
   end
