@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class Users extends React.Component {
+export default class Users extends Component {
 
   render() {
     return (
       <div>
-        User list
+        Last users
       </div>
     );
   }

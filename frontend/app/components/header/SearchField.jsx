@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Select from 'react-select';
 import '../../styles/react-select/index.less';
 
-export default class SearchField extends React.Component {
+export default class SearchField extends Component {
 
   render() {
     const options = [
