@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderBar from './HeaderBar';
 import TabBar from './TabBar';
+import SearchField from './SearchField';
 import styles from '../../styles/header/header';
 
 export default class Header extends React.Component {
@@ -9,7 +10,9 @@ export default class Header extends React.Component {
     return (
       <div style={styles.header}>
         <div style={styles.center}>
-          <HeaderBar />
+          <HeaderBar>
+            <SearchField />
+          </HeaderBar>
           <TabBar />
         </div>
       </div>
