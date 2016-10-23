@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import mui from "material-ui";
+import React, { Component } from 'react';
+import mui from 'material-ui';
 import LiofTheme from '../styles/themes/liof';
 
 let ThemeManager = new mui.Styles.ThemeManager();

@@ -21,7 +21,6 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.optimize.DedupePlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('styles.css')

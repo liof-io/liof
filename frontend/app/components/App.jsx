@@ -1,40 +1,39 @@
 import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import BaseComponent from './Base';
-import { Header } from './';
-import * as ItemActions from '../actions/ItemActions';
+import { Header, Lists } from './';
+import { createItem, fetchItems } from '../actions/ItemActions';
 
-class App extends BaseComponent {
-  static propTypes = {
-    items: PropTypes.array.isRequired,
-    dispatch: PropTypes.func.isRequired
+export default class App extends BaseComponent {
+  constructor(props) {
+    super(props);
   }
 
-  render() {
-    const { items, dispatch } = this.props;
-    const actions = bindActionCreators(ItemActions, dispatch);
+  static propTypes = {
+    children : React.PropTypes.element,
+    // items: PropTypes.arrayOf(PropTypes.string).isRequired
+  }
 
+  static defaultProps = {
+    isFetching: true
+  }
+
+  // Work
+  // componentWillMount() {
+  //   const { dispatch } = this.props;
+  //   dispatch(fetchItems());
+  //   console.log(this.props)
+  // }
+
+  render() {
+    const { children, items, isFetching } = this.props;
     return (
       <div>
-        <Header createItem={actions.createItem} />
+        <Header createItem={createItem} />
+        {isFetching && <p>fetching...</p>}
 
-        {this.props.children}
+        {children}
       </div>
     );
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    items: state.items
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(ItemActions, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
-
-// export default connect(mapStateToProps)(App);

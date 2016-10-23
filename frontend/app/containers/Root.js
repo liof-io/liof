@@ -6,7 +6,7 @@ import * as ItemActions from '../actions/ItemActions';
 function mapStateToProps(state) {
   return {
     isFetching: state.isFetching,
-    items: state.items
+    // items: state.items
   };
 }
 

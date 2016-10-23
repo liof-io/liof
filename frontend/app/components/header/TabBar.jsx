@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import reactMixin from 'react-mixin';
-import { Navigation } from 'react-router';
+import { Navigation, Link } from 'react-router';
 import { Tabs, Tab } from 'material-ui';
 import styles from '../../styles/header/tab-bar';
 
 @reactMixin.decorate(Navigation)
 
-export default class TabBar extends React.Component {
+export default class TabBar extends Component {
   constructor(props) {
     super(props);
 
@@ -20,14 +20,9 @@ export default class TabBar extends React.Component {
         'Team'
       ]
     };
-
-    this.defaultRoute = 'Lists'
   }
 
   getRoute(route) {
-    if (route == this.defaultRoute) {
-      return '/';
-    }
     return route.toLowerCase();
   }
 
@@ -38,6 +33,7 @@ export default class TabBar extends React.Component {
   render() {
     return (
       <div>
+
         <Tabs tabItemContainerStyle={styles.tabContainer} style={styles.tabs}>
           {
             this.tabs.defaults.map((tab) =>
